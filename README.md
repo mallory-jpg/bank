@@ -1,4 +1,4 @@
-# Bank
+# Banking Project
 
 Springboard Data Engineering 4.6: Object-Oriented Programming 
 
