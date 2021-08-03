@@ -1,6 +1,6 @@
 # Bank Project
 
-### This project simulates the daily user and admin processes of a fake bank called No Cap for Springboard Data Engineering curriculum, chapter 4.6 on Object-Oriented Programming.
+This project simulates the daily user and admin processes of a fake bank called *No Cap*.
 
 ## Installation/Cloning
 
