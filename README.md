@@ -1,6 +1,29 @@
-# Banking Project
+# Bank Project
 
-Springboard Data Engineering 4.6: Object-Oriented Programming 
+### This project simulates the daily user and admin processes of a fake bank called No Cap for Springboard Data Engineering curriculum, chapter 4.6 on Object-Oriented Programming.
 
-* Readme update coming soon :P
+## Installation/Cloning
+
+Use Git to clone the repository from Github
+ ```
+ git clone git+https://github.com/mallory-jpg/bank/
+ ```
+
+🚀 Use the most recent version of Python (project created with Python 3.9.1)
+
+## Setup
+	
+Config.ini should be in the format of:
+
+    [PostgreSQLdb] 
+    host= ‘<host name>’,
+    database = ‘<database name>’,
+    user = ‘<username>’,
+    password = ‘<password>’
+   
+    
+## Run 
+	
+From the command line, run ```python3 bank_interface.py``` to enter into the banking system simulation.
+
 
