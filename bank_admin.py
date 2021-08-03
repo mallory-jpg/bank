@@ -4,7 +4,7 @@
 from bank_customers import Users, USER_INFO 
 # from bank_customers import save_user_info
 
-BANK_NAME = 'No Cap(italism)'
+BANK_NAME = 'No Cap'
 # USER_INFO = {}
 
 class Admin(Users):
@@ -20,6 +20,7 @@ class Admin(Users):
     def new_user(self, new_user=None):
         new_user = input('Enter new username: ')
         self.username = new_user
+        print('Username updated.')
         self.save_user_info()
         return self.username
     
@@ -30,6 +31,7 @@ class Admin(Users):
             pass
         finally:
             self.password = new_password
+            print('Password updated.')
         self.save_user_info()
         return self.password
 
@@ -52,3 +54,5 @@ class Admin(Users):
 
     def lock_account(self):
          pass
+    
+  

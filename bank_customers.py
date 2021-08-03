@@ -5,7 +5,6 @@ import random
 USER_INFO = {}
 
 class Users:
-    # account = {}
 
     def __init__(self, name, uid='', username='', password='', account={}):
         self.account = account
@@ -17,11 +16,17 @@ class Users:
 
         # USER_INFO[self.name] = {'uid': self.uid}
        
-# STORE USER INFO IN DB, log access
-
+# store user info 
+    def save_user_info(self):
+        print('Saving...')
+        for key, value in self.account.items():
+            setattr(self, key, value)
+        print('Saved.')
+        
     def generate_uid(self, length=10):
             for _ in range(length):
                 self.uid += str(random.randint(0,9))
+            self.save_user_info()
             return self.uid
     
     def create_login(self):
@@ -31,12 +36,7 @@ class Users:
                 
                 if self.password == self.confirm:
                     break
+                self.save_user_info()
 
-# store user info in dictionary
-    def save_user_info(self):
-        print('Saving...')
-        for key, value in self.account.items():
-            setattr(self, key, value)
-        print('Saved.')
 
 

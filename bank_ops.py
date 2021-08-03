@@ -1,5 +1,5 @@
-# user operations: new account, check balance, transfer $, deposit, withdraw
-# threading to make sure operations queue is intact
+"""Bank User operations: new account, check balance, transfer $, deposit, withdraw"""
+
 from bank_customers import USER_INFO
 from bank_admin import Admin
 import random
@@ -10,7 +10,7 @@ bal_lock = threading.Lock()
 
 class BankAccount(Admin):
 
-    def __init__(self, name, balance=0, account_id=[]):
+    def __init__(self, balance=0, account_id=[]):
         self.balance = balance
         self.account_id = account_id
 
@@ -29,7 +29,7 @@ class BankAccount(Admin):
         return f'Current Balance: {self.balance}'
 
 
-    def withdraw(self, amount):
+    def withdraw(self, amount=0):
         bal_lock.acquire()
         amount = float(input('How much would you like to withdraw? Enter here: '))
         
@@ -46,7 +46,7 @@ class BankAccount(Admin):
             return self.check_balance()
 
 
-    def deposit(self, amount):
+    def deposit(self, amount=0):
         bal_lock.acquire()
         amount = float(input('Deposit amount: ')) # must include cents
         self.balance += amount
